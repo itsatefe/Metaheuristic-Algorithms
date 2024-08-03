@@ -1,0 +1,8 @@
+{
+  "z": 2,
+  "max_iteration": 3000000,
+  "no_improvement_threshold": 40,
+  "stopType": 0,
+  "time_limit": 10,
+  "tweaksCount": 30
+}

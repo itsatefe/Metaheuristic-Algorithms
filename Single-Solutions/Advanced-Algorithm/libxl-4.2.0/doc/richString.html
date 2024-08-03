@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>LibXL: RichString class reference</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-15" />
+  <meta name="description" content="RichString class reference. LibXL is a C++ library for direct reading and writing of Excel files (xls, xlsx).
+" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />  
+  <link rel="stylesheet" type="text/css" href="style.css" />  
+   </head>
+ <body>  
+  <table id="container" cellspacing="6">  
+   <tr>
+ <td id="header">
+  <a href="home.html" title="Home">  <img src="images/logo.png" style="float:left; margin-left:2em; border:none;" 
+       alt="LibXL - direct reading and writing Excel files" />
+  </a>  <div style="margin-left:13em; margin-top:2em">
+   <span id="title">LibXL</span>
+   <div id="subtitle">API reference version 4.1.2</div>
+  </div>
+ </td>
+</tr>
+   <tr>
+ <td valign="top" width="100%">
+  <div id="content">
+  <div><a href="index.html">Index</a>&nbsp;<a href="workbook.html">Book</a>&nbsp;<a href="spreadsheet.html">Sheet</a>&nbsp;<a href="format.html">Format</a>&nbsp;<a href="font.html">Font</a>&nbsp;<a href="autoFilter.html">AutoFilter</a>&nbsp;<a href="filterColumn.html">FilterColumn</a>&nbsp;<b>RichString</b>&nbsp;<a href="formControl.html">FormControl</a>&nbsp;<a href="conditionalFormatting.html">ConditionalFormatting</a>&nbsp;<a href="conditionalFormat.html">ConditionalFormat</a>&nbsp;</div> 
+
+<h3>RichString class reference</h3>
+
+<ul class="doc"> 
+ <li>
+  <a name="addFont"></a><a href="font.html">Font</a>* <span class="fname">addFont</span>(<a href="font.html">Font</a>* initFont = 0)  <div>Adds a new <a href="font.html">font</a> to the RichString for using with the <a href="richString.html#addText">RichString::addText()</a> method, initial parameters can be copied from other <a href="font.html">font</a>.</div>
+ </li> 
+ <li>
+  <a name="addText"></a><span class="keyword">void</span> <span class="fname">addText</span>(<span class="keyword">const wchar_t</span>* text, <a href="font.html">Font</a>* font = 0)  <div>Adds a piece of text (run) with the specified <a href="font.html">font</a> to the RichString for mixing different fonts in a single cell.</div>
+ </li> 
+ <li>
+  <a name="getText"></a><span class="keyword">const wchar_t</span>* <span class="fname">getText</span>(<span class="keyword">int</span> index, <a href="font.html">Font</a>** font = 0)  <div>Returns a piece of text (run) and <a href="font.html">font</a> with the specified <i>index</i> from the RichString.</div>
+ </li> 
+ <li>
+  <a name="textSize"></a><span class="keyword">int</span> <span class="fname">textSize</span>() <span class="keyword">const</span>  <div>Returns a number of text (run) in the RichString.</div>
+ </li> 
+</ul>
+
+<div class="blinks">
+  <a href="index.html">Index</a>&nbsp;<a href="workbook.html">Book</a>&nbsp;<a href="spreadsheet.html">Sheet</a>&nbsp;<a href="format.html">Format</a>&nbsp;<a href="font.html">Font</a>&nbsp;<a href="autoFilter.html">AutoFilter</a>&nbsp;<a href="filterColumn.html">FilterColumn</a>&nbsp;<b>RichString</b>&nbsp;<a href="formControl.html">FormControl</a>&nbsp;<a href="conditionalFormatting.html">ConditionalFormatting</a>&nbsp;<a href="conditionalFormat.html">ConditionalFormat</a>&nbsp;</div>
+  </div>
+ </td>
+</tr>
+   <tr>
+ <td id="footer">&copy; 2008 - 2023 XLware. All rights reserved.</td>
+</tr>
+  </table>
+ </body>
+</html>

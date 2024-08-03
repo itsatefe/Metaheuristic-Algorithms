@@ -1,0 +1,23 @@
+﻿  GRASP.cpp
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(65,33): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(65,22): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(89,68): warning C4244: 'argument': conversion from '_Rep' to 'unsigned int', possible loss of data
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(89,68): warning C4244:         with
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(89,68): warning C4244:         [
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(89,68): warning C4244:             _Rep=std::chrono::system_clock::rep
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(89,68): warning C4244:         ]
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(120,54): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(120,54): warning C4267:         with
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(120,54): warning C4267:         [
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(120,54): warning C4267:             _Ty=int
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(120,54): warning C4267:         ]
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(185,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(210,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(324,33): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\pars iran\source\repos\Advanced-Algorithm\Advanced-Algorithm\GRASP.cpp(324,22): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+  Generating code
+  1 of 3717 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    3 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Advanced-Algorithm.vcxproj -> C:\Users\pars iran\source\repos\Advanced-Algorithm\x64\Release\Advanced-Algorithm.exe

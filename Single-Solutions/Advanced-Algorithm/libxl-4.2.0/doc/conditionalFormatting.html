@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>LibXL: RichString class reference</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-15" />
+  <meta name="description" content="RichString class reference. LibXL is a C++ library for direct reading and writing of Excel files (xls, xlsx).
+" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />  
+  <link rel="stylesheet" type="text/css" href="style.css" />  
+   </head>
+ <body>  
+  <table id="container" cellspacing="6">  
+   <tr>
+ <td id="header">
+  <a href="home.html" title="Home">  <img src="images/logo.png" style="float:left; margin-left:2em; border:none;" 
+       alt="LibXL - direct reading and writing Excel files" />
+  </a>  <div style="margin-left:13em; margin-top:2em">
+   <span id="title">LibXL</span>
+   <div id="subtitle">API reference version 4.1.2</div>
+  </div>
+ </td>
+</tr>
+   <tr>
+ <td valign="top" width="100%">
+  <div id="content">
+  <div><a href="index.html">Index</a>&nbsp;<a href="workbook.html">Book</a>&nbsp;<a href="spreadsheet.html">Sheet</a>&nbsp;<a href="format.html">Format</a>&nbsp;<a href="font.html">Font</a>&nbsp;<a href="autoFilter.html">AutoFilter</a>&nbsp;<a href="filterColumn.html">FilterColumn</a>&nbsp;<a href="richString.html">RichString</a>&nbsp;<a href="formControl.html">FormControl</a>&nbsp;<b>ConditionalFormatting</b>&nbsp;<a href="conditionalFormat.html">ConditionalFormat</a>&nbsp;</div>  
+
+<h3>ConditionalFormatting class reference</h3>
+
+<ul class="doc"> 
+ <li>
+  <a name="addRange"></a><span class="keyword">void</span> <span class="fname">addRange</span>(<span class="keyword">int</span> rowFirst, <span class="keyword">int</span> rowLast, <span class="keyword">int</span> colFirst, <span class="keyword">int</span> colLast)  <div>Adds a range to these conditional formatting rules.</div>
+ </li> 
+ <li>
+  <a name="addRule"></a><span class="keyword">void</span> <span class="fname">addRule</span>(CFormatType type, <a href="conditionalFormat.html">ConditionalFormat</a>* cFormat, <span class="keyword">const wchar_t</span>* value = 0, <span class="keyword">bool</span> stopIfTrue = 0)  <div>Adds a conditional formatting rule that highlights cells whose values correspond to the specified criteria:<br/>
+<i>type</i> - the conditional format rule type, see the list of types below;<br/>
+<i>cFormat</i> - the conditional format used for highlighting cells, use the <a href="workbook.html#addConditionalFormat">Book::addConditionalFormat()</a> for adding conditional formats;<br/>
+<i>value</i> - specifies the criteria for the conditional formatting rule;<br/>
+<i>stopIfTrue</i> - if true, no rules with lower priority may be applied over this rule, when this rule is true;
+<table class="helptable"> 
+ <thead>                
+  <tr> 
+   <td>CFormatType value</td><td>Description</td> 
+  </tr>  
+ </thead>
+ <tr><td>CFORMAT_BEGINWITH</td><td>highlights cells that begin with the given text</td></tr> 
+ <tr><td>CFORMAT_CONTAINSBLANKS</td><td>highlights cells that are completely blank</td></tr> 
+ <tr><td>CFORMAT_CONTAINSERRORS</td><td>highlights cells with formula errors</td></tr> 
+ <tr><td>CFORMAT_CONTAINSTEXT</td><td>highlights cells containing given text</td></tr> 
+ <tr><td>CFORMAT_DUPLICATEVALUES</td><td>highlights duplicated values</td></tr> 
+ <tr><td>CFORMAT_ENDSWITH</td><td>highlights cells ending with given text</td></tr> 
+ <tr><td>CFORMAT_EXPRESSION</td><td>highlights cells when the formula result is true</td></tr> 
+ <tr><td>CFORMAT_NOTCONTAINSBLANKS</td><td>highlights cells that are not blank</td></tr>  
+ <tr><td>CFORMAT_NOTCONTAINSERRORS</td><td>highlights cells without formula errors</td></tr>  
+ <tr><td>CFORMAT_NOTCONTAINSTEXT</td><td>highlights cells that do not contain given text</td></tr>  
+ <tr><td>CFORMAT_UNIQUEVALUES</td><td>highlights unique values in the range</td></tr>  
+</table>
+</div>
+ </li> 
+ <li>
+   <a name="addTopRule"></a><span class="keyword">void</span> <span class="fname">addTopRule</span>(<a href="conditionalFormat.html">ConditionalFormat</a>* cFormat, <span class="keyword">const wchar_t</span>* value = 0, <span class="keyword">int</span> value, <span class="keyword">bool</span> bottom = <span class="keyword">false</span>, <span class="keyword">bool</span> percent = <span class="keyword">false</span>, <span class="keyword">bool</span> stopIfTrue = 0)   <div>Adds a conditional formatting rule that highlights cells whose values fall in the &lbrack;top N&rbrack; or &lbrack;bottom N&rbrack; bracket:<br/>
+<i>cFormat</i> - the conditional format used for highlighting cells, use the <a href="workbook.html#addConditionalFormat">Book::addConditionalFormat()</a> for adding conditional formats;<br/>
+<i>value</i> - specifies the &lbrack;top N&rbrack; or &lbrack;bottom N&rbrack; bracket;<br/>
+<i>bottom</i> - true for a &lbrack;bottom N&rbrack; rule, false for a &lbrack;top N&rbrack; rule<br/>
+<i>percent</i> - true for a percent top&sol;bottom rule;<br/>
+<i>stopIfTrue</i> - if true, no rules with lower priority may be applied over this rule, when this rule is true.
+</div>
+ </li> 
+ <li>
+  <a name="addOpNumRule"></a><span class="keyword">void</span> <span class="fname">addOpNumRule</span>(CFormatOperator op, <a href="conditionalFormat.html">ConditionalFormat</a>* cFormat, <span class="keyword">double</span> value1, <span class="keyword">double</span> value2 = 0, <span class="keyword">bool</span> stopIfTrue = 0)  <div>Adds a conditional formatting rule that highlights cells whose values are compared with a calculated result, using an operator:<br/>
+<i>op</i> - the operator in the conditional formatting rule, see the list of operators below;<br/>
+<i>cFormat</i> - the conditional format used for highlighting cells, use the <a href="workbook.html#addConditionalFormat">Book::addConditionalFormat()</a> for adding conditional formats;<br/>
+<i>value1</i> -  the numeric value for the expression with the specified operator;<br/>
+<i>value2</i> -  the numeric second optional value for the expression only for some operators;<br/>
+<i>stopIfTrue</i> - if true, no rules with lower priority may be applied over this rule, when this rule is true.<br/>
+<table class="helptable"> 
+ <thead>                
+  <tr> 
+   <td>CFormatOperator value</td><td>Description</td> 
+  </tr>  
+ </thead>
+ <tr><td>CFOPERATOR_LESSTHAN</td><td>'Less than' operator</td></tr> 
+ <tr><td>CFOPERATOR_LESSTHANOREQUAL</td><td>'Less than or equal to' operator</td></tr> 
+ <tr><td>CFOPERATOR_EQUAL</td><td>'Equal to' operator</td></tr> 
+ <tr><td>CFOPERATOR_NOTEQUAL</td><td>'Not equal to' operator</td></tr> 
+ <tr><td>CFOPERATOR_GREATERTHANOREQUAL</td><td>'Greater than or equal to' operator</td></tr> 
+ <tr><td>CFOPERATOR_GREATERTHAN</td><td>'Greater than' operator</td></tr> 
+ <tr><td>CFOPERATOR_BETWEEN</td><td>'Between' operator</td></tr> 
+ <tr><td>CFOPERATOR_NOTBETWEEN</td><td>'Not between' operator</td></tr>  
+ <tr><td>CFOPERATOR_CONTAINSTEXT</td><td>'Contains' operator</td></tr>  
+ <tr><td>CFOPERATOR_NOTCONTAINS</td><td>'Does not contain' operator</td></tr>  
+ <tr><td>CFOPERATOR_BEGINSWITH</td><td>'Begins with' operator</td></tr>  
+ <tr><td>CFOPERATOR_ENDSWITH</td><td>'Ends with' operator</td></tr>  
+</table>
+</div>
+ </li> 
+ <li>
+  <a name="addOpStrRule"></a><span class="keyword">void</span> <span class="fname">addOpStrRule</span>(CFormatOperator op, <a href="conditionalFormat.html">ConditionalFormat</a>* cFormat, <span class="keyword">const wchar_t</span>* value1, <span class="keyword">const wchar_t</span>* value2 = 0, <span class="keyword">bool</span> stopIfTrue = 0)  <div>Adds a conditional formatting rule that highlights cells whose values are compared with a calculated result, using an operator:<br/>
+<i>op</i> - the operator in the conditional formatting rule, see the list of operators above;<br/>
+<i>cFormat</i> - the conditional format used for highlighting cells, use the <a href="workbook.html#addConditionalFormat">Book::addConditionalFormat()</a> for adding conditional formats;<br/>
+<i>value1</i> -  the string value for the expression with the specified operator;<br/>
+<i>value2</i> -  the string second optional value for the expression only for some operators;<br/>
+<i>stopIfTrue</i> - if true, no rules with lower priority may be applied over this rule, when this rule is true.<br/>
+
+</div>
+ </li> 
+ <li>
+  <a name="addAboveAverageRule"></a><span class="keyword">void</span> <span class="fname">addAboveAverageRule</span>(<a href="conditionalFormat.html">ConditionalFormat</a>* cFormat, <span class="keyword">bool</span> aboveAverage = <span class="keyword">true</span>, <span class="keyword">bool</span> equalAverage = <span class="keyword">false</span>, <span class="keyword">int</span> stdDev = 0, <span class="keyword">bool</span> stopIfTrue = 0)  <div>Adds a conditional formatting rule that highlights cells that are above or below the average for all values in the range:<br/>
+<i>cFormat</i> - the conditional format used for highlighting cells, use the <a href="workbook.html#addConditionalFormat">Book::addConditionalFormat()</a> for adding conditional formats;<br/>
+<i>aboveAverage</i> - true for &lbrack;above average&rbrack; rule, false for &lbrack;below average&rbrack; rule;<br/>
+<i>equalAverage</i> - true for inclusive of the average itself, false for exclusive of that value, valid only for &lbrack;above average&rbrack; rule;<br/>
+<i>stdDev</i> - the number of standard deviations to include above or below the average, valid only for &lbrack;above average&rbrack; rule;<br/>
+<i>stopIfTrue</i> - if true, no rules with lower priority may be applied over this rule, when this rule is true.<br/>
+</div>
+ </li> 
+ <li>
+  <a name="addTimePeriodRule"></a><span class="keyword">void</span> <span class="fname">addTimePeriodRule</span>(<a href="conditionalFormat.html">ConditionalFormat</a>* cFormat, CFormatTimePeriod timePeriod, <span class="keyword">bool</span> stopIfTrue = 0)  <div>Adds a conditional formatting rule that highlights cells containing dates in the specified time period.<br/>
+<i>cFormat</i> - the conditional format used for highlighting cells, use the <a href="workbook.html#addConditionalFormat">Book::addConditionalFormat()</a> for adding conditional formats;<br/>
+<i></i>timePeriod - the applicable time period, see the list of values below;<br/>
+<i>stopIfTrue</i> - if true, no rules with lower priority may be applied over this rule, when this rule is true.
+<table class="helptable"> 
+ <thead>                
+  <tr> 
+   <td>CFormatTimePeriod value</td><td>Description</td> 
+  </tr>  
+ </thead>
+ <tr><td>CFTP_LAST7DAYS</td><td>a date in the last seven days</td></tr> 
+ <tr><td>CFTP_LASTMONTH</td><td>a date occuring in the last calendar month</td></tr> 
+ <tr><td>CFTP_LASTWEEK</td><td>a date occuring last week</td></tr> 
+ <tr><td>CFTP_NEXTMONTH</td><td>a date occuring in the next calendar month</td></tr> 
+ <tr><td>CFTP_NEXTWEEK</td><td>a date occuring next week</td></tr> 
+ <tr><td>CFTP_THISMONTH</td><td>a date occuring in this calendar month</td></tr> 
+ <tr><td>CFTP_THISWEEK</td><td>a date occuring this week</td></tr> 
+ <tr><td>CFTP_TODAY</td><td>today's date</td></tr>  
+ <tr><td>CFTP_TOMORROW</td><td>tomorrow's date</td></tr>  
+ <tr><td>CFTP_YESTERDAY</td><td>yesterday's date</td></tr>  
+</table>
+
+
+</div>
+ </li> 
+ <li>
+  <a name="add2ColorScaleRule"></a><span class="keyword">void</span> <span class="fname">add2ColorScaleRule</span>(<a href="colors.html">Color</a> minColor, <a href="colors.html">Color</a> maxColor, CFVOType minType = CFVO_MIN, <span class="keyword">double</span> minValue = 0, CFVOType maxType = CFVO_MAX, <span class="keyword">double</span> maxValue = 0, <span class="keyword">bool</span> stopIfTrue = 0)  <div>Adds a conditional formatting rule that creates a gradated 2-color scale on the cells:<br/>
+<i>minColor</i> - the color for minimum;<br/>
+<i>maxColor</i> - the color for maximum;<br/>
+<i>minType</i> - the type of minValue, see values below;<br/>
+<i>minValue</i> - the numeric value for minimum;<br/>
+<i>maxType</i> - the type of maxValue, see values below;<br/>
+<i>maxValue</i> - the numeric value for maximum;<br/>
+<i>stopIfTrue</i> - if true, no rules with lower priority may be applied over this rule, when this rule is true.<br/>
+<table class="helptable"> 
+ <thead>                
+  <tr> 
+   <td>CFVOType value</td><td>Description</td> 
+  </tr>  
+ </thead>
+ <tr><td>CFVO_MIN</td><td>indicates that the minimum value in the range shall be used as the minimum value for the gradient</td></tr> 
+ <tr><td>CFVO_MAX</td><td>indicates that the maximum value in the range shall be used as the maximum value for the gradient</td></tr> 
+ <tr><td>CFVO_FORMULA</td><td>the minimum&sol;midpoint&sol;maximum value for the gradient is determined by a formula</td></tr> 
+ <tr><td>CFVO_NUMBER</td><td>indicates that the minimum&sol;midpoint&sol;maximum value for the gradient is specified by a constant numeric value</td></tr> 
+ <tr><td>CFVO_PERCENT</td><td>value indicates a percentage between the minimum and maximum values in the range shall be used as the minimum&sol;midpoint&sol;maximum value for the gradient</td></tr> 
+ <tr><td>CFVO_PERCENTILE</td><td>value indicates a percentile ranking in the range shall be used as the minimum&sol;midpoint&sol;maximum value for the gradient</td></tr> 
+</table>
+</div>
+ </li> 
+ <li>
+  <a name="add2ColorScaleFormulaRule"></a><span class="keyword">void</span> <span class="fname">add2ColorScaleFormulaRule</span>(<a href="colors.html">Color</a> minColor, <a href="colors.html">Color</a> maxColor, CFVOType minType = CFVO_FORMULA, <span class="keyword">const char</span>* minValue = 0, CFVOType maxType = CFVO_FORMULA, <span class="keyword">const wchar_t</span>* maxValue = 0, <span class="keyword">bool</span> stopIfTrue = 0)  <div>Adds a conditional formatting rule that creates a gradated 2-color scale on the cells:<br/>
+<i>minColor</i> - the color for minimum;<br/>
+<i>maxColor</i> - the color for maximum;<br/>
+<i>minType</i> - the type of minValue, see values above;<br/>
+<i>minValue</i> - the formula expression for minimum;<br/>
+<i>maxType</i> - the type of maxValue, see values above;<br/>
+<i>maxValue</i> - the formula expression for maximum;<br/>
+<i>stopIfTrue</i> - if true, no rules with lower priority may be applied over this rule, when this rule is true.<br/>
+
+</div>
+ </li> 
+ <li>
+  <a name="add3ColorScaleRule"></a><span class="keyword">void</span> <span class="fname">add3ColorScaleRule</span>(<a href="colors.html">Color</a> minColor, <a href="colors.html">Color</a> midColor, <a href="colors.html">Color</a> maxColor, CFVOType minType = CFVO_MIN, <span class="keyword">double</span> minValue = 0, CFVOType midType = CFVO_PERCENTILE, <span class="keyword">double</span> midValue = 50, CFVOType maxType = CFVO_MAX, <span class="keyword">double</span> maxValue = 0, <span class="keyword">bool</span> stopIfTrue = 0)  <div>Adds a conditional formatting rule that creates a gradated 3-color scale on the cells:<br/>
+<i>minColor</i> - the color for minimum;<br/>
+<i>minColor</i> - the color for midpoint;<br/>
+<i>maxColor</i> - the color for maximum;<br/>
+<i>minType</i> - the type of minValue, see values above;<br/>
+<i>minValue</i> - the numeric value for minimum;<br/>
+<i>midType</i> - the type of midValue, see values above;<br/>
+<i>midValue</i> - the numeric value for midpoint;<br/>
+<i>maxType</i> - the type of maxValue, see values above;<br/>
+<i>maxValue</i> - the numeric value for maximum;<br/>
+<i>stopIfTrue</i> - if true, no rules with lower priority may be applied over this rule, when this rule is true.
+
+</div>
+ </li> 
+ <li>
+  <a name="add3ColorScaleFormulaRule"></a><span class="keyword">void</span> <span class="fname">add3ColorScaleFormulaRule</span>(<a href="colors.html">Color</a> minColor, <a href="colors.html">Color</a> midColor, <a href="colors.html">Color</a> maxColor, CFVOType minType = CFVO_FORMULA, <span class="keyword">const wchar_t</span>* minValue = 0, CFVOType midType = CFVO_FORMULA, <span class="keyword">double</span> midValue = 50, CFVOType maxType = CFVO_FORMULA, <span class="keyword">const wchar_t</span>* maxValue = 0, <span class="keyword">bool</span> stopIfTrue = 0)
+  <div>Adds a conditional formatting rule that creates a gradated 3-color scale on the cells:<br/>
+<i>minColor</i> - the color for minimum;<br/>
+<i>minColor</i> - the color for midpoint;<br/>
+<i>maxColor</i> - the color for maximum;<br/>
+<i>minType</i> - the type of minValue, see values above;<br/>
+<i>minValue</i> - the formula expression for minimum;<br/>
+<i>midType</i> - the type of midValue, see values above;<br/>
+<i>midValue</i> - the formula expression for midpoint;<br/>
+<i>maxType</i> - the type of maxValue, see values above;<br/>
+<i>maxValue</i> - the formula expression for maximum;<br/>
+<i>stopIfTrue</i> - if true, no rules with lower priority may be applied over this rule, when this rule is true.
+
+</div>
+ </li> 
+</ul>
+
+<div class="blinks">
+  <a href="index.html">Index</a>&nbsp;<a href="workbook.html">Book</a>&nbsp;<a href="spreadsheet.html">Sheet</a>&nbsp;<a href="format.html">Format</a>&nbsp;<a href="font.html">Font</a>&nbsp;<a href="autoFilter.html">AutoFilter</a>&nbsp;<a href="filterColumn.html">FilterColumn</a>&nbsp;<a href="richString.html">RichString</a>&nbsp;<a href="formControl.html">FormControl</a>&nbsp;<b>ConditionalFormatting</b>&nbsp;<a href="conditionalFormat.html">ConditionalFormat</a>&nbsp;</div>
+  </div>
+ </td>
+</tr>
+   <tr>
+ <td id="footer">&copy; 2008 - 2023 XLware. All rights reserved.</td>
+</tr>
+  </table>
+ </body>
+</html>

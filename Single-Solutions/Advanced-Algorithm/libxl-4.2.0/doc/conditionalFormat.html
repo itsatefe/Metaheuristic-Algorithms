@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>LibXL: RichString class reference</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-15" />
+  <meta name="description" content="RichString class reference. LibXL is a C++ library for direct reading and writing of Excel files (xls, xlsx).
+" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />  
+  <link rel="stylesheet" type="text/css" href="style.css" />  
+   </head>
+ <body>  
+  <table id="container" cellspacing="6">  
+   <tr>
+ <td id="header">
+  <a href="home.html" title="Home">  <img src="images/logo.png" style="float:left; margin-left:2em; border:none;" 
+       alt="LibXL - direct reading and writing Excel files" />
+  </a>  <div style="margin-left:13em; margin-top:2em">
+   <span id="title">LibXL</span>
+   <div id="subtitle">API reference version 4.1.2</div>
+  </div>
+ </td>
+</tr>
+   <tr>
+ <td valign="top" width="100%">
+  <div id="content">
+  <div><a href="index.html">Index</a>&nbsp;<a href="workbook.html">Book</a>&nbsp;<a href="spreadsheet.html">Sheet</a>&nbsp;<a href="format.html">Format</a>&nbsp;<a href="font.html">Font</a>&nbsp;<a href="autoFilter.html">AutoFilter</a>&nbsp;<a href="filterColumn.html">FilterColumn</a>&nbsp;<a href="richString.html">RichString</a>&nbsp;<a href="formControl.html">FormControl</a>&nbsp;<a href="conditionalFormatting.html">ConditionalFormatting</a>&nbsp;<b>ConditionalFormat</b>&nbsp;</div>  
+
+<h3>ConditionalFormat class reference</h3>
+
+<ul class="doc"> 
+ <li>
+  <a name="font"></a><a href="font.html">Font</a>* <span class="fname">font</span>()  <div>Returns the pointer to the current used font for this conditional format.</div>
+ </li> 
+ <li>
+  <a name="numFormat"></a>NumFormat <span class="fname">numFormat</span>() <span class="keyword">const</span>  <div>Returns the number format identifier.</div>
+ </li> 
+ <li>
+   <a name="setNumFormat"></a><span class="keyword">void</span> <span class="fname">setNumFormat</span>(NumFormat numFormat)   <div>Sets the number format identifier. The identifier must be a valid built-in number format identifier:
+   <table class="helptable">           
+    <thead>
+     <tr>
+      <td>Constant</td><td>Description</td><td>Example</td>
+     </tr>
+    </thead>
+    <tr>
+     <td>NUMFORMAT_GENERAL</td><td>general format</td><td></td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_NUMBER</td><td>general number</td><td align="right">1000</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_NUMBER_D2</td><td>number with decimal point</td><td align="right">1000.00</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_NUMBER_SEP</td><td>number with thousands separator</td><td align="right">100,000</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_NUMBER_SEP_D2</td><td>number with decimal point and thousands separator</td><td align="right">100,000.00</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CURRENCY_NEGBRA</td><td>monetary value, negative in brackets</td><td align="right">(1000$)</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CURRENCY_NEGBRARED</td><td>monetary value, negative is red in brackets</td><td align="right"><span style="color: red;">(1000$)</span></td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CURRENCY_D2_NEGBRA</td><td>monetary value with decimal point, negative in brackets</td><td align="right">($1000.00)</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CURRENCY_D2_NEGBRARED</td><td>monetary value with decimal point, negative is red in brackets</td><td align="right"><span style="color: red;">($1000.00)</span></td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_PERCENT</td><td>percent value, multiply the cell value by 100</td><td align="right">75%</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_PERCENT_D2</td><td>percent value with decimal point, multiply the cell value by 100</td><td align="right">75.00%</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_SCIENTIFIC_D2</td><td>scientific value with E character and decimal point</td><td align="right">10.00E+1</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_FRACTION_ONEDIG</td><td>fraction value, one digit</td><td align="right">10 1/2</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_FRACTION_TWODIG</td><td>fraction value, two digits</td><td align="right">10 23/95</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_DATE</td><td>date value, depends on OS settings</td><td align="right">3/11/2009</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CUSTOM_D_MON_YY</td><td>custom date value</td><td align="right">11-Mar-09</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CUSTOM_D_MON</td><td>custom date value</td><td align="right">11-Mar</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CUSTOM_MON_YY</td><td>custom date value</td><td align="right">Mar-09</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CUSTOM_HMM_AM</td><td>custom date value</td><td align="right">8:30 AM</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CUSTOM_HMMSS_AM</td><td>custom date value</td><td align="right">8:30:00 AM</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CUSTOM_HMM</td><td>custom date value</td><td align="right">8:30</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CUSTOM_HMMSS</td><td>custom date value</td><td align="right">8:30:00</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CUSTOM_MDYYYY_HMM</td><td>custom datetime value</td><td align="right">3/11/2009 8:30</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_NUMBER_SEP_NEGBRA</td><td>number with thousands separator, negative in brackets</td><td align="right">(4,000)</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_NUMBER_SEP_NEGBRARED</td><td>number with thousands separator, negative is red in brackets</td><td align="right"><span style="color: red;">(4,000)</span></td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_NUMBER_D2_SEP_NEGBRA</td><td>number with thousands separator and decimal point, negative in brackets</td><td align="right">(4,000.00)</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_NUMBER_D2_SEP_NEGBRARED</td><td>number with thousands separator and decimal point, negative is red in brackets</td><td align="right"><span style="color: red;">(4,000.00)</span></td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_ACCOUNT</td><td>account value</td><td align="right">5,000</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_ACCOUNTCUR</td><td>account value with currency symbol</td><td style="padding: 0px;"><table width="100%"><tr><td style="border: 0px; padding: 3px;">$</td><td style="border: 0px; text-align: right; padding: 3px;">5,000</td></tr></table></td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_ACCOUNT_D2</td><td>account value with decimal point</td><td align="right">5,000.00</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_ACCOUNT_D2_CUR</td><td>account value with currency symbol and decimal point</td><td style="padding: 0px;"><table width="100%"><tr><td style="border: 0px; padding: 3px;">$</td><td style="border: 0px; text-align: right; padding: 3px;">5,000.00</td></tr></table></td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CUSTOM_MMSS</td><td>custom time value</td><td align="right">30:55</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CUSTOM_H0MMSS</td><td>custom time value</td><td align="right">20:30:55</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CUSTOM_MMSS0</td><td>custom time value</td><td align="right">30:55.0</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_CUSTOM_000P0E_PLUS0</td><td>custom value</td><td align="right">15.2E+3</td>
+    </tr>
+    <tr>
+     <td>NUMFORMAT_TEXT</td><td>text value</td><td>any text</td>
+    </tr>
+   </table></div>
+ </li> 
+ <li>
+  <a name="customNumFormat"></a><span class="keyword">const wchar_t</span>* <span class="fname">customNumFormat</span>() <span class="keyword">const</span>  <div>Returns a custom format string for this conditional format. See <a href="custom-format.html">custom format string guidelines</a>.</div>
+ </li> 
+ <li>
+  <a name="setCustomNumFormat"></a><span class="keyword">void</span> <span class="fname">setCustomNumFormat</span>(<span class="keyword">const wchar_t</span>* customNumFormat)  <div>Sets a custom number format for this conditional format. The format string <i>customNumFormat</i> indicates how to format and render the numeric value of a cell. See <a href="custom-format.html">custom format strings guidelines</a>.
+</div>
+ </li> 
+ <li>
+  <a name="setBorder"></a><span class="keyword">void</span> <span class="fname">setBorder</span>(BorderStyle style = BORDERSTYLE_THIN)  <div>
+   Sets the border style.
+   <a name="borderStyleTable"></a>
+   <table class="helptable"> 
+    <thead>
+     <tr><td>BorderStyle value</td><td>View</td></tr> 
+    </thead>
+    <tr><td>BORDERSTYLE_NONE</td><td><img src="images/borderstyle_none.png" alt="BORDERSTYLE_NONE" style="border:none;" /></td></tr> 
+    <tr><td>BORDERSTYLE_THIN</td><td><img src="images/borderstyle_thin.png" alt="BORDERSTYLE_THIN" style="border:none;" /></td></tr> 
+    <tr><td>BORDERSTYLE_MEDIUM</td><td><img src="images/borderstyle_medium.png" alt="BORDERSTYLE_MEDIUM" style="border:none;" /></td></tr> 
+    <tr><td>BORDERSTYLE_DASHED</td><td><img src="images/borderstyle_dashed.png" alt="BORDERSTYLE_DASHED" style="border:none;" /></td></tr> 
+    <tr><td>BORDERSTYLE_DOTTED</td><td><img src="images/borderstyle_dotted.png" alt="BORDERSTYLE_DOTTED" style="border:none;" /></td></tr> 
+    <tr><td>BORDERSTYLE_THICK</td><td><img src="images/borderstyle_thick.png" alt="BORDERSTYLE_THICK" style="border:none;" /></td></tr> 
+    <tr><td>BORDERSTYLE_DOUBLE</td><td><img src="images/borderstyle_double.png" alt="BORDERSTYLE_DOUBLE" style="border:none;" /></td></tr> 
+    <tr><td>BORDERSTYLE_HAIR</td><td><img src="images/borderstyle_hair.png" alt="BORDERSTYLE_HAIR" style="border:none;" /></td></tr> 
+    <tr><td>BORDERSTYLE_MEDIUMDASHED</td><td><img src="images/borderstyle_mediumdashed.png" alt="BORDERSTYLE_MEDIUMDASHED" style="border:none;" /></td></tr> 
+    <tr><td>BORDERSTYLE_DASHDOT</td><td><img src="images/borderstyle_dashdot.png" alt="BORDERSTYLE_DASHDOT" style="border:none;" /></td></tr> 
+    <tr><td>BORDERSTYLE_MEDIUMDASHDOT</td><td><img src="images/borderstyle_mediumdashdot.png" alt="BORDERSTYLE_MEDIUMDASHDOT" style="border:none;" /></td></tr> 
+    <tr><td>BORDERSTYLE_DASHDOTDOT</td><td><img src="images/borderstyle_dashdotdot.png" alt="BORDERSTYLE_DASHDOTDOT" style="border:none;" /></td></tr> 
+    <tr><td>BORDERSTYLE_MEDIUMDASHDOTDOT</td><td><img src="images/borderstyle_mediumdashdotdot.png" alt="BORDERSTYLE_MEDIUMDASHDOTDOT" style="border:none;" /></td></tr> 
+    <tr><td>BORDERSTYLE_SLANTDASHDOT</td><td><img src="images/borderstyle_slantdashdot.png" alt="BORDERSTYLE_SLANTDASHDOT" style="border:none;" /></td></tr> 
+   </table> 
+  </div>
+ </li> 
+ <li>
+  <a name="setBorderColor"></a><span class="keyword">void</span> <span class="fname">setBorderColor</span>(<a href="colors.html">Color</a> color)  <div>Sets the border <a href="colors.html">color</a>.</div>
+ </li> 
+
+ <li>
+  <a name="borderLeft"></a><a href="#borderStyleTable">BorderStyle</a> <span class="fname">borderLeft</span>() <span class="keyword">const</span>  <div>Returns the left <a href="#borderStyleTable">border style</a>.</div>
+ </li> 
+ <li>
+  <a name="setBorderLeft"></a><span class="keyword">void</span> <span class="fname">setBorderLeft</span>(<a href="#borderStyleTable">BorderStyle</a> style = BORDERSTYLE_THIN)  <div>Sets the left <a href="#borderStyleTable">border style</a>.</div>
+ </li> 
+
+ <li>
+  <a name="borderRight"></a><a href="#borderStyleTable">BorderStyle</a> <span class="fname">borderRight</span>() <span class="keyword">const</span>  <div>Returns the right <a href="#borderStyleTable">border style</a>.</div>
+ </li> 
+ <li>
+  <a name="setBorderRight"></a><span class="keyword">void</span> <span class="fname">setBorderRight</span>(<a href="#borderStyleTable">BorderStyle</a> style = BORDERSTYLE_THIN)  <div>Sets the right <a href="#borderStyleTable">border style</a>.</div>
+ </li> 
+
+ <li>
+  <a name="borderTop"></a><a href="#borderStyleTable">BorderStyle</a> <span class="fname">borderTop</span>() <span class="keyword">const</span>  <div>Returns the top <a href="#borderStyleTable">border style</a>.</div>
+ </li> 
+ <li>
+  <a name="setBorderTop"></a><span class="keyword">void</span> <span class="fname">setBorderTop</span>(<a href="#borderStyleTable">BorderStyle</a> style = BORDERSTYLE_THIN)  <div>Sets the top <a href="#borderStyleTable">border style</a>.</div>
+ </li> 
+
+ <li>
+  <a name="borderBottom"></a><a href="#borderStyleTable">BorderStyle</a> <span class="fname">borderBottom</span>() <span class="keyword">const</span>  <div>Returns the bottom <a href="#borderStyleTable">border style</a>.</div>
+ </li> 
+ <li>
+  <a name="setBorderBottom"></a><span class="keyword">void</span> <span class="fname">setBorderBottom</span>(<a href="#borderStyleTable">BorderStyle</a> style = BORDERSTYLE_THIN)  <div>Sets the bottom <a href="#borderStyleTable">border style</a>.</div>
+ </li> 
+
+ <li>
+  <a name="borderLeftColor"></a><a href="colors.html">Color</a> <span class="fname">borderLeftColor</span>() <span class="keyword">const</span>  <div>Returns the <a href="colors.html">color</a> of the left border.</div>
+ </li> 
+ <li>
+  <a name="setBorderLeftColor"></a><span class="keyword">void</span> <span class="fname">setBorderLeftColor</span>(<a href="colors.html">Color</a> color)  <div>Sets the <a href="colors.html">color</a> of the left border.</div>
+ </li> 
+
+ <li>
+  <a name="borderRightColor"></a><a href="colors.html">Color</a> <span class="fname">borderRightColor</span>() <span class="keyword">const</span>  <div>Returns the <a href="colors.html">color</a> of the right border.</div>
+ </li> 
+ <li>
+  <a name="setBorderRightColor"></a><span class="keyword">void</span> <span class="fname">setBorderRightColor</span>(<a href="colors.html">Color</a> color)  <div>Sets the <a href="colors.html">color</a> of the right border.</div>
+ </li> 
+
+ <li>
+  <a name="borderTopColor"></a><a href="colors.html">Color</a> <span class="fname">borderTopColor</span>() <span class="keyword">const</span>  <div>Returns the <a href="colors.html">color</a> of the top border.</div>
+ </li> 
+ <li>
+  <a name="setBorderTopColor"></a><span class="keyword">void</span> <span class="fname">setBorderTopColor</span>(<a href="colors.html">Color</a> color)  <div>Sets the <a href="colors.html">color</a> of the top border.</div>
+ </li> 
+
+ <li>
+  <a name="borderBottomColor"></a><a href="colors.html">Color</a> <span class="fname">borderBottomColor</span>() <span class="keyword">const</span>  <div>Returns the <a href="colors.html">color</a> of the bottom border.</div>
+ </li> 
+ <li>
+  <a name="setBorderBottomColor"></a><span class="keyword">void</span> <span class="fname">setBorderBottomColor</span>(<a href="colors.html">Color</a> color)  <div>Sets the <a href="colors.html">color</a> of the bottom border.</div>
+ </li> 
+
+ <li>
+  <a name="fillPattern"></a>FillPattern <span class="fname">fillPattern</span>() <span class="keyword">const</span>  <div>Returns the fill pattern.</div>
+ </li> 
+ <li>
+  <a name="setFillPattern"></a><span class="keyword">void</span> <span class="fname">setFillPattern</span>(FillPattern pattern)  <div>
+   Sets the fill pattern.
+   <table class="helptable"> 
+    <thead>
+     <tr><td>FillPattern value</td><td>View</td></tr> 
+    </thead>
+    <tr><td>FILLPATTERN_NONE</td><td></td></tr> 
+    <tr><td>FILLPATTERN_SOLID</td><td><img src="images/pattern_solid.png" alt="FILLPATTERN_SOLID" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_GRAY50</td><td><img src="images/pattern_gray50.png" alt="FILLPATTERN_GRAY50" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_GRAY75</td><td><img src="images/pattern_gray75.png" alt="FILLPATTERN_GRAY75" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_GRAY25</td><td><img src="images/pattern_gray25.png" alt="FILLPATTERN_GRAY25" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_HORSTRIPE</td><td><img src="images/pattern_horstripe.png" alt="FILLPATTERN_HORSTRIPE" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_VERSTRIPE</td><td><img src="images/pattern_verstripe.png" alt="FILLPATTERN_VERSTRIPE" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_REVDIAGSTRIPE</td><td><img src="images/pattern_revdiagstripe.png" alt="FILLPATTERN_REVDIAGSTRIPE" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_DIAGSTRIPE</td><td><img src="images/pattern_diagstripe.png" alt="FILLPATTERN_DIAGSTRIPE" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_DIAGCROSSHATCH</td><td><img src="images/pattern_diagcrosshatch.png" alt="FILLPATTERN_DIAGCROSSHATCH" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_THICKDIAGCROSSHATCH</td><td><img src="images/pattern_thickdiagcrosshatch.png" alt="FILLPATTERN_THICKDIAGCROSSHATCH" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_THINHORSTRIPE</td><td><img src="images/pattern_thinhorstripe.png" alt="FILLPATTERN_THINHORSTRIPE" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_THINVERSTRIPE</td><td><img src="images/pattern_thinverstripe.png" alt="FILLPATTERN_THINVERSTRIPE" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_THINREVDIAGSTRIPE</td><td><img src="images/pattern_thinrevdiagstripe.png" alt="FILLPATTERN_THINREVDIAGSTRIPE" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_THINDIAGSTRIPE</td><td><img src="images/pattern_thindiagstripe.png" alt="FILLPATTERN_THINDIAGSTRIPE" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_THINHORCROSSHATCH</td><td><img src="images/pattern_thinhorcrosshatch.png" alt="FILLPATTERN_THINHORCROSSHATCH" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_THINDIAGCROSSHATCH</td><td><img src="images/pattern_thindiagcrosshatch.png" alt="FILLPATTERN_THINDIAGCROSSHATCH" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_GRAY12P5</td><td><img src="images/pattern_gray12p5.png" alt="FILLPATTERN_GRAY12P5" style="border:none;" /></td></tr> 
+    <tr><td>FILLPATTERN_GRAY6P25</td><td><img src="images/pattern_gray6p25.png" alt="FILLPATTERN_GRAY6P25" style="border:none;" /></td></tr> 
+   </table> 
+  </div>
+
+ </li> 
+
+ <li>
+  <a name="patternForegroundColor"></a><a href="colors.html">Color</a> <span class="fname">patternForegroundColor</span>() <span class="keyword">const</span>  <div>Returns the foreground <a href="colors.html">color</a> of the fill pattern.</div>
+ </li> 
+ <li>
+  <a name="setPatternForegroundColor"></a><span class="keyword">void</span> <span class="fname">setPatternForegroundColor</span>(<a href="colors.html">Color</a> color)  <div>Sets the foreground <a href="colors.html">color</a> of the fill pattern.</div>
+ </li> 
+
+ <li>
+  <a name="patternBackgroundColor"></a><a href="colors.html">Color</a> <span class="fname">patternBackgroundColor</span>() <span class="keyword">const</span>  <div>Returns the background <a href="colors.html">color</a> of the fill pattern.</div>
+ </li> 
+ <li>
+  <a name="setPatternBackgroundColor"></a><span class="keyword">void</span> <span class="fname">setPatternBackgroundColor</span>(<a href="colors.html">Color</a> color)  <div>Sets the background <a href="colors.html">color</a> of the fill pattern.</div>
+ </li> 
+
+
+</ul>
+
+
+<div class="blinks">
+<a href="index.html">Index</a>&nbsp;<a href="workbook.html">Book</a>&nbsp;<a href="spreadsheet.html">Sheet</a>&nbsp;<a href="format.html">Format</a>&nbsp;<a href="font.html">Font</a>&nbsp;<a href="autoFilter.html">AutoFilter</a>&nbsp;<a href="filterColumn.html">FilterColumn</a>&nbsp;<a href="richString.html">RichString</a>&nbsp;<a href="formControl.html">FormControl</a>&nbsp;<a href="conditionalFormatting.html">ConditionalFormatting</a>&nbsp;<b>ConditionalFormat</b>&nbsp;</div>
+  </div>
+ </td>
+</tr>
+   <tr>
+ <td id="footer">&copy; 2008 - 2023 XLware. All rights reserved.</td>
+</tr>
+  </table>
+ </body>
+</html>

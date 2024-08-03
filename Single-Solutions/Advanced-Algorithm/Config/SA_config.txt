@@ -1,0 +1,12 @@
+{
+  "z": 2,
+  "max_iteration": 10000,
+  "schedule": 0,
+  "no_improvement_threshold": 50,
+  "temperature_threshold": 0.005,
+  "acceptance_rate": 0.90,
+  "stopType": 0,
+  "convergence_threshold": 5.0,
+  "no_overall_improvement_threshold": 20,
+  "time_limit": 20
+}

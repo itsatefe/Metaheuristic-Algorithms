@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Problem">
+      <UniqueIdentifier>{32e45199-5e8c-4f73-b1ba-5ced892d28a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InstanceSet1">
+      <UniqueIdentifier>{fae3bd1b-0350-4291-ab36-2a923941c5e1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Advanced-Algorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulatedAnnealing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bin.cpp">
+      <Filter>Source Files\Problem</Filter>
+    </ClCompile>
+    <ClCompile Include="BinPacking.cpp">
+      <Filter>Source Files\Problem</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source Files\Problem</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Source Files\Problem</Filter>
+    </ClCompile>
+    <ClCompile Include="Neighborhood.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TabuSearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HillClimbing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GRASP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Item.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BinPacking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulatedAnnealing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="matplotlibcpp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Neighborhood.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TabuSearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TabuList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HillClimbing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GRASP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Instance Set 1\BPP_50_75_0.2_0.8_4.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\BPP_50_100_0.2_0.8_4.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\BPP_50_120_0.1_0.8_6.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\BPP_50_120_0.2_0.7_2.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\BPP_50_120_0.2_0.8_6.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\BPP_50_125_0.1_0.7_3.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Falkenauer_t60_05.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Falkenauer_t60_09.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Falkenauer_t120_04.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Falkenauer_t120_16.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Falkenauer_t249_06.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Falkenauer_t501_05.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Falkenauer_t501_15.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Falkenauer_u120_01.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Falkenauer_u120_18.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Falkenauer_u250_04.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Falkenauer_u500_15.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Falkenauer_u1000_15.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Hard28_BPP40.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Hard28_BPP178.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Hard28_BPP781.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Hard28_BPP900.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Schwerin2_BPP2.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Schwerin2_BPP25.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Schwerin2_BPP44.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Schwerin2_BPP75.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Schwerin2_BPP78.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Waescher_TEST0030.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Waescher_TEST0075.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+    <Text Include="Instance Set 1\Waescher_TEST0097.txt">
+      <Filter>Source Files\InstanceSet1</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

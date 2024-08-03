@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>LibXL: RichString class reference</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-15" />
+  <meta name="description" content="RichString class reference. LibXL is a C++ library for direct reading and writing of Excel files (xls, xlsx).
+" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />  
+  <link rel="stylesheet" type="text/css" href="style.css" />  
+   </head>
+ <body>  
+  <table id="container" cellspacing="6">  
+   <tr>
+ <td id="header">
+  <a href="home.html" title="Home">  <img src="images/logo.png" style="float:left; margin-left:2em; border:none;" 
+       alt="LibXL - direct reading and writing Excel files" />
+  </a>  <div style="margin-left:13em; margin-top:2em">
+   <span id="title">LibXL</span>
+   <div id="subtitle">API reference version 4.1.2</div>
+  </div>
+ </td>
+</tr>
+   <tr>
+ <td valign="top" width="100%">
+  <div id="content">
+  <div><a href="index.html">Index</a>&nbsp;<a href="workbook.html">Book</a>&nbsp;<a href="spreadsheet.html">Sheet</a>&nbsp;<a href="format.html">Format</a>&nbsp;<a href="font.html">Font</a>&nbsp;<a href="autoFilter.html">AutoFilter</a>&nbsp;<a href="filterColumn.html">FilterColumn</a>&nbsp;<a href="richString.html">RichString</a>&nbsp;<b>FormControl</b>&nbsp;<a href="conditionalFormatting.html">ConditionalFormatting</a>&nbsp;<a href="conditionalFormat.html">ConditionalFormat</a>&nbsp;</div>  
+
+<h3>FormControl class reference</h3>
+
+<ul class="doc"> 
+ <li>
+  <a name="objectType"></a>ObjectType <span class="fname">objectType</span>() <span class="keyword">const</span>  <div>Returns the form control object type.
+<table class="helptable"> 
+ <thead>                
+  <tr> 
+   <td>ObjectType value</td><td>Description</td> 
+  </tr>  
+ </thead>
+ <tr><td>OBJECT_UNKNOWN</td><td>Unknown control</td></tr> 
+ <tr><td>OBJECT_BUTTON</td><td>Button control</td></tr> 
+ <tr><td>OBJECT_CHECKBOX</td><td>Check-box control</td></tr> 
+ <tr><td>OBJECT_DROP</td><td>Drop-down (combo box) control&nbsp;</td></tr> 
+ <tr><td>OBJECT_GBOX</td><td>Group box control</td></tr> 
+ <tr><td>OBJECT_LABEL</td><td>Label control</td></tr> 
+ <tr><td>OBJECT_LIST</td><td>List box control</td></tr> 
+ <tr><td>OBJECT_RADIO</td><td>Radio button control</td></tr>  
+ <tr><td>OBJECT_SCROLL</td><td>Scroll bar control</td></tr>  
+ <tr><td>OBJECT_SPIN</td><td>Spin box control</td></tr>  
+ <tr><td>OBJECT_EDITBOX</td><td>Edit box control</td></tr>  
+ <tr><td>OBJECT_DIALOG</td><td>Dialog control</td></tr>  
+</table>
+</div>
+ </li> 
+ <li>
+  <a name="checked"></a>CheckedType <span class="fname">checked</span>() <span class="keyword">const</span>  <div>Returns whether a check box is selected or a radio button is selected. This attribute only applies to check box and radio button form controls.</div>
+ </li> 
+ <li>
+   <a name="setChecked"></a><span class="keyword">void</span> <span class="fname">setChecked</span>(CheckedType checked)   <div>Sets whether a check box is selected or a radio button is selected. This attribute only applies to check box and radio button form controls.
+<table class="helptable"> 
+ <thead>                
+  <tr> 
+   <td>CheckedType value</td><td>Description</td> 
+  </tr>  
+ </thead>
+ <tr><td>CHECKEDTYPE_UNCHECKED</td><td>Object is unchecked or unselected.</td></tr> 
+ <tr><td>CHECKEDTYPE_CHECKED</td><td>Object is checked or selected.</td></tr> 
+ <tr><td>CHECKEDTYPE_MIXED</td><td>Mixed selection. Applies only to check boxes.</td></tr> 
+</table>
+</div>
+ </li> 
+ <li>
+  <a name="fmlaGroup"></a><span class="keyword">const wchar_t</span>* <span class="fname">fmlaGroup</span>()  <div>Returns the cell reference in a group box is linked to. Only applies to group box form controls.</div>
+ </li> 
+ <li>
+  <a name="setFmlaGroup"></a><span class="keyword">void</span> <span class="fname">setFmlaGroup</span>(<span class="keyword">const wchar_t</span>* group)  <div>Sets the cell reference in a group box is linked to. Only applies to group box form controls.</div>
+ </li> 
+ <li>
+  <a name="fmlaLink"></a><span class="keyword">const wchar_t</span>* <span class="fname">fmlaLink</span>()  <div>Returns the cell reference is linked to. Only applies to check boxes, radio buttons, scroll bars, spin boxes, drop-downs and list boxes.</div>
+ </li> 
+ <li>
+  <a name="setFmlaLink"></a><span class="keyword">void</span> <span class="fname">setFmlaLink</span>(<span class="keyword">const wchar_t</span>* link)  <div>Sets the cell reference is linked to. Only applies to check boxes, radio buttons, scroll bars, spin boxes, drop-downs and list boxes.</div>
+ </li> 
+ <li>
+  <a name="fmlaRange"></a><span class="keyword">const wchar_t</span>* <span class="fname">fmlaRange</span>()  <div>Returns the cell reference with range of source data cells. This attribute only applies to list box and drop-down form controls.</div>
+ </li> 
+ <li>
+  <a name="setFmlaRange"></a><span class="keyword">void</span> <span class="fname">setFmlaRange</span>(<span class="keyword">const wchar_t</span>* range)  <div>Sets the cell reference with range of source data cells. This attribute only applies to list box and drop-down form controls.</div>
+ </li> 
+ <li>
+  <a name="fmlaTxbx"></a><span class="keyword">const wchar_t</span>* <span class="fname">fmlaTxbx</span>()  <div>Returns the cell reference with the source data that the form control object's data is linked to. This attribute applies only to label and edit box form controls.</div>
+ </li> 
+ <li>
+  <a name="setFmlaTxbx"></a><span class="keyword">void</span> <span class="fname">setFmlaTxbx</span>(<span class="keyword">const wchar_t</span>* txbx)  <div>Sets the cell reference with the source data that the form control object's data is linked to. Any cell range can be specified but only the first cell in the range is considered. This attribute applies only to label and edit box form controls.</div>
+ </li> 
+
+
+ <li>
+  <a name="name"></a><span class="keyword">const wchar_t</span>* <span class="fname">name</span>()  <div>Returns the name for this embedded control.</div>
+ </li> 
+ <li>
+  <a name="linkedCell"></a><span class="keyword">const wchar_t</span>* <span class="fname">linkedCell</span>()  <div>Returns the worksheet range linked to the control's value.</div>
+ </li> 
+ <li>
+  <a name="listFillRange"></a><span class="keyword">const wchar_t</span>* <span class="fname">listFillRange</span>()  <div>Returns the range of source data cells used to populate the list box.</div>
+ </li> 
+ <li>
+  <a name="macro"></a><span class="keyword">const wchar_t</span>* <span class="fname">macro</span>()  <div>Returns the custom function associated with the object.</div>
+ </li> 
+ <li>
+  <a name="altText"></a><span class="keyword">const wchar_t</span>* <span class="fname">altText</span>()  <div>Returns alternative text for the object.</div>
+ </li> 
+ <li>
+  <a name="locked"></a><span class="keyword">bool</span> <span class="fname">locked</span>() <span class="keyword">const</span>  <div>Returns whether the object is locked when the sheet is protected.
+</div>
+ </li> 
+ <li>
+  <a name="defaultSize"></a><span class="keyword">bool</span> <span class="fname">defaultSize</span>() <span class="keyword">const</span>  <div>Returns whether the object is at its default size.</div>
+ </li> 
+ <li>
+  <a name="print"></a><span class="keyword">bool</span> <span class="fname">print</span>() <span class="keyword">const</span>  <div>Returns whether the object is printed when the document is printed.</div>
+ </li> 
+ <li>
+  <a name="disabled"></a><span class="keyword">bool</span> <span class="fname">disabled</span>() <span class="keyword">const</span>  <div>Returns whether the object is allowed to run an attached macro.</div>
+ </li> 
+ <li>
+  <a name="item"></a><span class="keyword">const wchar_t</span>* <span class="fname">item</span>(<span class="keyword">int</span> index)  <div>Returns the item by index from a list box or drop-down form control.</div>
+ </li> 
+ <li>
+  <a name="itemSize"></a><span class="keyword">int</span> <span class="fname">itemSize</span>() <span class="keyword">const</span>  <div>Returns the number of items in a list box or drop-down form control.</div>
+ </li> 
+ <li>
+  <a name="addItem"></a><span class="keyword">void</span> <span class="fname">addItem</span>(<span class="keyword">const wchar_t</span>* value)  <div>Adds the item to a list box or drop-down form control.</div>
+ </li> 
+ <li>
+  <a name="insertItem"></a><span class="keyword">void</span> <span class="fname">insertItem</span>(<span class="keyword">int</span> index, <span class="keyword">const wchar_t</span>* value)  <div>Inserts the item to the specified position to a list box or drop-down form control.</div>
+ </li> 
+ <li>
+  <a name="clearItems"></a><span class="keyword">void</span> <span class="fname">clearItems</span>()  <div>Clears all items from a list box or drop-down form control.</div>
+ </li> 
+ <li>
+  <a name="dropLines"></a><span class="keyword">int</span> <span class="fname">dropLines</span>() <span class="keyword">const</span>  <div>Returns the number of lines in the drop-down before scroll bars are added.</div>
+ </li> 
+ <li>
+  <a name="setDropLines"></a><span class="keyword">void</span> <span class="fname">setDropLines</span>(<span class="keyword">int</span> lines)  <div>Sets the number of lines in the drop-down before scroll bars are added. This attribute only applies to drop-down form controls. This value must be at least 0 and at most 30000.</div>
+ </li> 
+ <li>
+  <a name="dx"></a><span class="keyword">int</span> <span class="fname">dx</span>() <span class="keyword">const</span>  <div>Returns the width of the scroll bar in pixels.</div>
+ </li> 
+ <li>
+  <a name="setDx"></a><span class="keyword">void</span> <span class="fname">setDx</span>(<span class="keyword">int</span> dx)  <div>Sets the width of the scroll bar in pixels. This attribute only applies to list boxes, scroll bars, spin boxes and drop-downs.</div>
+ </li> 
+ <li>
+  <a name="firstButton"></a><span class="keyword">bool</span> <span class="fname">firstButton</span>() <span class="keyword">const</span>  <div>Returns whether the object is the first button in a set of radio buttons.</div>
+ </li> 
+ <li>
+  <a name="setFirstButton"></a><span class="keyword">void</span> <span class="fname">setFirstButton</span>(<span class="keyword">bool</span> firstButton)   <div>Sets whether the object is the first button in a set of radio buttons. This attribute only applies to radio button form controls.</div>
+ </li> 
+ <li>
+  <a name="horiz"></a><span class="keyword">bool</span> <span class="fname">horiz</span>() <span class="keyword">const</span>  <div>Returns whether the scroll bar is horizontal.</div>
+ </li> 
+ <li>
+  <a name="setHoriz"></a><span class="keyword">void</span> <span class="fname">setHoriz</span>(<span class="keyword">bool</span> horiz)   <div>Sets whether the scroll bar is horizontal. This attribute only applies to scroll bar form controls. </div>
+ </li> 
+ <li>
+  <a name="inc"></a><span class="keyword">int</span> <span class="fname">inc</span>() <span class="keyword">const</span>  <div>Returns the change in the current value of a scroll bar or a spin box form control as a result of on an increment click.</div>
+ </li> 
+ <li>
+  <a name="setInc"></a><span class="keyword">void</span> <span class="fname">setInc</span>(<span class="keyword">int</span> inc)   <div>Sets the change in the current value of a scroll bar or a spin box form control as a result of on an increment click. It must be at least 0 and at most 30000. This attribute applies only to scroll bar or spin box form controls.</div>
+ </li> 
+ <li>
+  <a name="getMax"></a><span class="keyword">int</span> <span class="fname">getMax</span>() <span class="keyword">const</span>  <div>Returns the maximum value generated by the scroll bar or by the spin box.</div>
+ </li> 
+ <li>
+  <a name="setMax"></a><span class="keyword">void</span> <span class="fname">setMax</span>(<span class="keyword">int</span> max)   <div>Sets the maximum value generated by the scroll bar or by the spin box. It must be at least 0 and at most 30000. This attribute only applies to scroll bars and spin boxes.</div>
+ </li> 
+ <li>
+  <a name="getMin"></a><span class="keyword">int</span> <span class="fname">getMin</span>() <span class="keyword">const</span>  <div>Returns the minimum value generated by the scroll bar or by the spin box.</div>
+ </li> 
+ <li>
+  <a name="setMin"></a><span class="keyword">void</span> <span class="fname">setMin</span>(<span class="keyword">int</span> min)   <div>Sets the minimum value generated by the scroll bar or by the spin box. It must be at least 0 and at most 30000. This attribute only applies to scroll bars and spin box.</div>
+ </li> 
+ <li>
+  <a name="multiSel"></a><span class="keyword">const wchar_t</span>* <span class="fname">multiSel</span>() <span class="keyword">const</span>  <div>Returns the indices of selected items as a comma-delimited list. The list indices are one-based. This attribute is valid only if the attribute selType has the value "multi". This attribute applies only to list box form controls.</div>
+ </li> 
+ <li>
+  <a name="setMultiSel"></a><span class="keyword">void</span> <span class="fname">setMultiSel</span>(<span class="keyword">const wchar_t</span>* value)   <div>Sets the indices of selected items as a comma-delimited list. The list indices are one-based. This attribute is valid only if the attribute selType has the value "multi". This attribute applies only to list box form controls.</div>
+ </li> 
+ <li>
+  <a name="sel"></a><span class="keyword">int</span> <span class="fname">sel</span>() <span class="keyword">const</span>  <div>Returns the index of the selected item. The index is one-based. If set to a value of 0, no items are selected. This attribute applies only to list box and drop-down form controls.</div>
+ </li> 
+ <li>
+  <a name="setSel"></a><span class="keyword">void</span> <span class="fname">setSel</span>(<span class="keyword">int</span> sel)   <div>Sets the index of the selected item. The index is one-based. If set to a value of 0, no items are selected. This attribute applies only to list box and drop-down form controls.</div>
+ </li> 
+ <li>
+  <a name="fromAnchor"></a><span class="keyword">bool</span> <span class="fname">fromAnchor</span>(<span class="keyword">int</span>* col, <span class="keyword">int</span>* colOff, <span class="keyword">int</span>* row, <span class="keyword">int</span>* rowOff)  <div>Returns the top left location of a control within a document.</div>
+ </li> 
+ <li>
+  <a name="toAnchor"></a><span class="keyword">bool</span> <span class="fname">toAnchor</span>(<span class="keyword">int</span>* col, <span class="keyword">int</span>* colOff, <span class="keyword">int</span>* row, <span class="keyword">int</span>* rowOff)  <div>Returns the bottom right location of a control within a document.</div>
+ </li> 
+</ul>
+
+<div class="blinks">
+<a href="index.html">Index</a>&nbsp;<a href="workbook.html">Book</a>&nbsp;<a href="spreadsheet.html">Sheet</a>&nbsp;<a href="format.html">Format</a>&nbsp;<a href="font.html">Font</a>&nbsp;<a href="autoFilter.html">AutoFilter</a>&nbsp;<a href="filterColumn.html">FilterColumn</a>&nbsp;<a href="richString.html">RichString</a>&nbsp;<b>FormControl</b>&nbsp;<a href="conditionalFormatting.html">ConditionalFormatting</a>&nbsp;<a href="conditionalFormat.html">ConditionalFormat</a>&nbsp;</div>
+  </div>
+ </td>
+</tr>
+   <tr>
+ <td id="footer">&copy; 2008 - 2023 XLware. All rights reserved.</td>
+</tr>
+  </table>
+ </body>
+</html>

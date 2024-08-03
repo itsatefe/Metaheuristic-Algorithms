@@ -1,0 +1,10 @@
+{
+  "z": 2,
+  "max_iteration": 300000,
+  "no_improvement_threshold": 10,
+  "stopType": 0,
+  "convergence_threshold": 5.0,
+  "time_limit": 20,
+  "tabuSize":10,
+  "tweaksCount": 5
+}
