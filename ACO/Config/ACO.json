@@ -1,0 +1,13 @@
+{
+  "alpha": 2.0,
+  "beta": 5.0,
+  "evaporation_rate": 0.3,
+  "ant_count": 10,
+  "max_iteration": 200000,
+  "elit_percent": 0.4,
+  "max_pheromone": 20.0,
+  "min_pheromone": 0.0005,
+  "ACS_state_tranision_prob": 0.8,
+  "max_duration": 300,
+  "stopType": 0
+}
