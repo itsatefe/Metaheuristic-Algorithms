@@ -1,0 +1,18 @@
+{
+  "z": 2,
+  "epsilon": 2.0,
+  "mutation_probability": 0.2,
+  "crossover_probability": 0.9,  
+  "convergence_threshold": 0.0001,
+  "tournament_size": 5,
+  "population_size": 100,
+  "max_generation": 10,
+  "elite_percentage": 0.2,
+  "init_infeasibility": 0.0,
+  "survivalType": 0,
+  "no_improvement_threshold": 20,
+  "stopType": 0,
+  "time_limit": 120,
+  "eval_limit": 2000,
+  "memetic": true
+}
