@@ -1,0 +1,13 @@
+{
+  "num_particles": 24,
+  "max_iteration": 100000,
+  "island_iteration": 50,
+  "no_improvement": 25,
+  "num_islands":4,
+  "migration_interval":2,
+  "w": 0.1,
+  "c1": 0.2,
+  "c2": 0.7,
+  "max_duration": 300,
+  "stop_by_time": true
+}
